@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class Spider : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private Rigidbody rigBody;
     
-    internal Vector3 Position => rigidbody.position;
-    internal Quaternion Rotation => rigidbody.rotation;
+    internal Vector3 Position => rigBody.position;
+    internal Quaternion Rotation => rigBody.rotation;
+    internal Vector3 StartPosition => startPosition;
     
     [Space]
     [SerializeField] private List<SpiderLeg> spiderLegs;
 
     private Vector3 startPosition;
+    private Quaternion startQuaternion;
     
     internal List<SpiderLeg> SpiderLegs => spiderLegs;
 
-    private void Awake()
+    internal void Initialize()
     {
-        startPosition = rigidbody.position;
+        startPosition = rigBody.transform.position;
+        startQuaternion = rigBody.transform.rotation;
+
+        spiderLegs.ForEach(item => item.Initialize());
     }
     
     internal void Reset()
     {
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.angularVelocity = Vector3.zero;
+        rigBody.velocity = Vector3.zero;
+        rigBody.angularVelocity = Vector3.zero;
         
-        rigidbody.position = startPosition;
+        rigBody.transform.position = startPosition;
+        rigBody.transform.rotation = startQuaternion;
         
         foreach (var spiderLeg in spiderLegs)
         {

@@ -11,7 +11,7 @@ public class SpiderLeg : MonoBehaviour
     internal LegElement LowerLeg => lowerLeg;
     internal LegElement MiddleLeg => middleLeg;
 
-    private void Awake()
+    internal void Initialize()
     {
         bodyLeg.OnAwake();
         lowerLeg.OnAwake();
@@ -32,13 +32,15 @@ public class SpiderLeg : MonoBehaviour
         [SerializeField] private HingeJoint joint;
 
         private Vector3 startPosition;
+        private Quaternion startQuaternion;
         
         internal Vector3 Position => rigidbody.position;
         internal Quaternion Rotation => rigidbody.rotation;
 
         internal void OnAwake()
         {
-            startPosition = rigidbody.position;
+            startPosition = rigidbody.transform.position;
+            startQuaternion = rigidbody.transform.rotation;
         }
         
         internal void SetMotorVelocityAndForce(float velocity, float force)
@@ -58,7 +60,8 @@ public class SpiderLeg : MonoBehaviour
             rigidbody.velocity = Vector3.zero;
             rigidbody.angularVelocity = Vector3.zero;
 
-            rigidbody.position = startPosition;
+            rigidbody.transform.position = startPosition;
+            rigidbody.transform.rotation = startQuaternion;
         }
     }
 }
