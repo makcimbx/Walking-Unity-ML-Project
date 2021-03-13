@@ -1,0 +1,2 @@
+@ECHO
+tensorboard --logdir results
