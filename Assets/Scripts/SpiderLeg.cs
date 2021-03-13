@@ -1,28 +1,26 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiderLeg : MonoBehaviour
 {
-    [SerializeField] private LegElement bodyLeg;
-    [SerializeField] private LegElement lowerLeg;
-    [SerializeField] private LegElement middleLeg;
+    [SerializeField] private List<LegElement> legsList;
 
-    internal LegElement BodyLeg => bodyLeg;
-    internal LegElement LowerLeg => lowerLeg;
-    internal LegElement MiddleLeg => middleLeg;
+    internal List<LegElement> LegsList => legsList;
 
     internal void Initialize()
     {
-        bodyLeg.OnAwake();
-        lowerLeg.OnAwake();
-        middleLeg.OnAwake(); 
+        foreach (var legElement in legsList)
+        {
+            legElement.OnAwake();
+        }
     }
 
     internal void Reset()
     {
-        bodyLeg.Reset();
-        lowerLeg.Reset();
-        middleLeg.Reset();   
+        foreach (var legElement in legsList)
+        {
+            legElement.Reset();
+        }
     }
     
     [System.Serializable]

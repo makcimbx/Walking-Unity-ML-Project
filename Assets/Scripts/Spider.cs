@@ -13,6 +13,9 @@ public class Spider : MonoBehaviour
     [Space]
     [SerializeField] private List<SpiderLeg> spiderLegs;
 
+    [Space]
+    [SerializeField] private float targetUpsideDownAngle;
+
     private Vector3 startPosition;
     private Quaternion startQuaternion;
     
@@ -25,7 +28,14 @@ public class Spider : MonoBehaviour
 
         spiderLegs.ForEach(item => item.Initialize());
     }
-    
+
+    internal bool CheckUpsideDown()
+    {
+        var sin = Mathf.Sin(Mathf.Deg2Rad * targetUpsideDownAngle);
+        var upsideDownAngle = Vector3.Dot(transform.up, Vector3.down);
+        return upsideDownAngle > sin;
+    }
+
     internal void Reset()
     {
         rigBody.velocity = Vector3.zero;

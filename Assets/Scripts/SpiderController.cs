@@ -32,12 +32,11 @@ public class SpiderController : Agent
             sensor.AddObservation(finishTransform.position);
             foreach (var spiderLeg in spider.SpiderLegs)
             {
-                sensor.AddObservation(spiderLeg.BodyLeg.Position);
-                sensor.AddObservation(spiderLeg.BodyLeg.Rotation);
-                sensor.AddObservation(spiderLeg.LowerLeg.Position);
-                sensor.AddObservation(spiderLeg.LowerLeg.Rotation);
-                sensor.AddObservation(spiderLeg.MiddleLeg.Position);
-                sensor.AddObservation(spiderLeg.MiddleLeg.Rotation);
+                foreach (var leg in spiderLeg.LegsList)
+                {
+                    sensor.AddObservation(leg.Position);
+                    sensor.AddObservation(leg.Rotation);
+                }
             }
             sensor.AddObservation(spider.Position);
             sensor.AddObservation(spider.Rotation);
@@ -46,15 +45,15 @@ public class SpiderController : Agent
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)//НЕ ШАРЮ, ПОФИКСЬ
         {
             var actionX = actionBuffers.ContinuousActions[i * 3 + 0];
             var actionY = actionBuffers.ContinuousActions[i * 3 + 1];
             var actionZ = actionBuffers.ContinuousActions[i * 3 + 2];
 
-            spider.SpiderLegs[i].BodyLeg.SetMotorVelocityAndForce(actionX * 1000, 100);
-            spider.SpiderLegs[i].LowerLeg.SetMotorVelocityAndForce(actionY * 1000, 100);
-            spider.SpiderLegs[i].MiddleLeg.SetMotorVelocityAndForce(actionZ * 1000, 100);
+            //spider.SpiderLegs[i].BodyLeg.SetMotorVelocityAndForce(actionX * 1000, 100);
+            //spider.SpiderLegs[i].LowerLeg.SetMotorVelocityAndForce(actionY * 1000, 100);
+            //spider.SpiderLegs[i].MiddleLeg.SetMotorVelocityAndForce(actionZ * 1000, 100);
         }
 
         var curDistance = Vector3.Distance(spider.Position, finishTransform.position);
