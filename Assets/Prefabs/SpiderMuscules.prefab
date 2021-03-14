@@ -503,7 +503,7 @@ MonoBehaviour:
   - {fileID: 5666580409221402568}
   - {fileID: 5666580407410098748}
   - {fileID: 5666580408128875911}
-  targetUpsideDownAngle: 60
+  targetUpsideDownAngle: 0
 --- !u!1 &5666580407410098744
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +617,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: d4ed1e7e9be1eea40a430faf1d9b7b13, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 0544f4c240d61a74f8a4674b55e187e3, type: 3}
   m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: SpiderMuscules
