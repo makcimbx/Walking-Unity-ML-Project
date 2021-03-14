@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class Spider : MonoBehaviour
 {
     [SerializeField] private Rigidbody rigBody;
     
+    internal bool OnFloor { get; private set; }
     internal Vector3 Position => rigBody.position;
     internal Quaternion Rotation => rigBody.rotation;
     internal Vector3 StartPosition => startPosition;
@@ -20,6 +22,14 @@ public class Spider : MonoBehaviour
     private Quaternion startQuaternion;
     
     internal List<SpiderLeg> SpiderLegs => spiderLegs;
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.tag == "Floor")
+        {
+            OnFloor = true;
+        }
+    }
 
     internal void Initialize()
     {
@@ -43,6 +53,8 @@ public class Spider : MonoBehaviour
         
         rigBody.transform.position = startPosition;
         rigBody.transform.rotation = startQuaternion;
+        
+        OnFloor = false;
         
         foreach (var spiderLeg in spiderLegs)
         {
