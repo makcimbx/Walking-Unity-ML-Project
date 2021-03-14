@@ -380,7 +380,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: db3935735e085b446aae999e4b8b096f, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 1654a2c7e2d222e41a8293cd2eb1b7de, type: 3}
   m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: Stickman
