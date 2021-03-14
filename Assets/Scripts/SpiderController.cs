@@ -45,21 +45,21 @@ public class SpiderController : Agent
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        for (int i = 0; i < 4; i++)//НЕ ШАРЮ, ПОФИКСЬ
+        for (int i = 0; i < 4; i++)
         {
             var actionX = actionBuffers.ContinuousActions[i * 3 + 0];
             var actionY = actionBuffers.ContinuousActions[i * 3 + 1];
             var actionZ = actionBuffers.ContinuousActions[i * 3 + 2];
 
-            //spider.SpiderLegs[i].BodyLeg.SetMotorVelocityAndForce(actionX * 1000, 100);
-            //spider.SpiderLegs[i].LowerLeg.SetMotorVelocityAndForce(actionY * 1000, 100);
-            //spider.SpiderLegs[i].MiddleLeg.SetMotorVelocityAndForce(actionZ * 1000, 100);
+            spider.SpiderLegs[i].LegsList[0].SetMotorVelocityAndForce(actionX * 1000, 100);
+            spider.SpiderLegs[i].LegsList[1].SetMotorVelocityAndForce(actionY * 1000, 100);
+            spider.SpiderLegs[i].LegsList[2].SetMotorVelocityAndForce(actionZ * 1000, 100);
         }
 
         var curDistance = Vector3.Distance(spider.Position, finishTransform.position);
         var maxDistance = Vector3.Distance(spider.StartPosition, finishTransform.position);
         var progress = 1 - (curDistance / maxDistance);
-        if (progress <= -1)
+        if (progress <= -1 || spider.CheckUpsideDown())
         {
             SetReward(-1f);
             EndEpisode();
