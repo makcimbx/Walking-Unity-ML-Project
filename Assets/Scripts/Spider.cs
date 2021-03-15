@@ -22,6 +22,7 @@ public class Spider : MonoBehaviour
     private Quaternion startQuaternion;
     
     internal List<SpiderLeg> SpiderLegs => spiderLegs;
+    internal Rigidbody RigBody => rigBody;
 
     private void OnCollisionEnter(Collision other)
     {

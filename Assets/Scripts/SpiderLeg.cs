@@ -36,6 +36,7 @@ public class SpiderLeg : MonoBehaviour
         internal Vector3 Position => rigidbody.position;
         internal Quaternion Rotation => rigidbody.rotation;
         internal bool OnFloor => helper?.OnFloor ?? false;
+        internal Rigidbody Rigidbody => rigidbody;
 
         internal void OnAwake()
         {

@@ -34,11 +34,13 @@ public class SpiderController : Agent
                 foreach (var leg in spiderLeg.LegsList)
                 {
                     sensor.AddObservation(leg.Position);
-                    sensor.AddObservation(leg.Rotation);
+                    sensor.AddObservation(leg.Rotation.eulerAngles);
+                    sensor.AddObservation(leg.Rigidbody.velocity);
                 }
             }
             sensor.AddObservation(spider.Position);
-            sensor.AddObservation(spider.Rotation);
+            sensor.AddObservation(spider.Rotation.eulerAngles);
+            sensor.AddObservation(spider.RigBody.velocity);
         }
     }
 
@@ -55,10 +57,22 @@ public class SpiderController : Agent
             spider.SpiderLegs[i].LegsList[2].SetMotorVelocityAndForce(actionZ * 1000, 100);
         }
 
+        bool isLegOnFloor = false;
+        foreach (var leg in spider.SpiderLegs)
+        {
+            int counter = 0;
+            foreach (var legElement in leg.LegsList)
+            {
+                if (counter == 2) continue;
+                isLegOnFloor = isLegOnFloor || legElement.OnFloor;
+                counter++;
+            }
+        }
+
         var curDistance = Vector3.Distance(spider.Position, finishTransform.position);
         var maxDistance = Vector3.Distance(spider.StartPosition, finishTransform.position);
         var progress = 1 - (curDistance / maxDistance);
-        if (progress <= -1 || spider.OnFloor)
+        if (progress <= -1 || spider.OnFloor || isLegOnFloor)
         {
             SetReward(-1f);
             EndEpisode();

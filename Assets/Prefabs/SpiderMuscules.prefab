@@ -1005,8 +1005,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 94
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 120
+    NumStackedVectorObservations: 40
     m_ActionSpec:
       m_NumContinuousActions: 12
       BranchSizes: 
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 2e2130a611669dc4a80902a0dd9152da, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: SpiderMuscules
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 1000
+  MaxStep: 2000
   spider: {fileID: 5666580407339448818}
   finishTransform: {fileID: 5666580407159150820}
   UseVecObs: 1
