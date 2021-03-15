@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 5666580407136439377}
   - component: {fileID: 5666580407136439381}
   - component: {fileID: 5666580407136439390}
+  - component: {fileID: 2038157352964859595}
   m_Layer: 0
   m_Name: LowerLeg
   m_TagString: Untagged
@@ -563,6 +564,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2038157352964859595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666580407136439391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5666580407159150816
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,10 +947,13 @@ MonoBehaviour:
   legsList:
   - rigidbody: {fileID: 5666580408045580443}
     joint: {fileID: 5666580408045580442}
+    helper: {fileID: 0}
   - rigidbody: {fileID: 8491869940634181675}
     joint: {fileID: 8491869940634181679}
+    helper: {fileID: 9083712692757615879}
   - rigidbody: {fileID: 8491869942159252767}
     joint: {fileID: 8491869942159252765}
+    helper: {fileID: 7771215113005736773}
 --- !u!1 &5666580408026589742
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +967,7 @@ GameObject:
   - component: {fileID: 5666580408026589731}
   - component: {fileID: 5666580408026589728}
   m_Layer: 0
-  m_Name: SpiderLeg
+  m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1224,10 +1240,13 @@ MonoBehaviour:
   legsList:
   - rigidbody: {fileID: 5666580408324818537}
     joint: {fileID: 5666580408324818536}
+    helper: {fileID: 0}
   - rigidbody: {fileID: 5666580408647985000}
     joint: {fileID: 5666580408647985003}
+    helper: {fileID: 4319308228797663207}
   - rigidbody: {fileID: 5666580409020165011}
     joint: {fileID: 5666580409020165008}
+    helper: {fileID: 2354203536969273471}
 --- !u!1 &5666580408267388964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1261,7 @@ GameObject:
   - component: {fileID: 5666580408267388966}
   - component: {fileID: 5666580408267388954}
   - component: {fileID: 5666580408267388967}
+  - component: {fileID: 2673218998834472311}
   m_Layer: 0
   m_Name: MiddleLeg
   m_TagString: Untagged
@@ -1377,6 +1397,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2673218998834472311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666580408267388964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5666580408324818550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1558,7 @@ GameObject:
   - component: {fileID: 5666580408336195494}
   - component: {fileID: 5666580408336195482}
   - component: {fileID: 5666580408336195495}
+  - component: {fileID: 1814638168729746012}
   m_Layer: 0
   m_Name: LowerLeg
   m_TagString: Untagged
@@ -1662,6 +1695,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1814638168729746012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666580408336195492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5666580408451270010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,6 +1721,7 @@ GameObject:
   - component: {fileID: 5666580408451270012}
   - component: {fileID: 5666580408451270000}
   - component: {fileID: 5666580408451270013}
+  - component: {fileID: 3986616111584457915}
   m_Layer: 0
   m_Name: MiddleLeg
   m_TagString: Untagged
@@ -1811,6 +1857,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3986616111584457915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666580408451270010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5666580408647985001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1883,7 @@ GameObject:
   - component: {fileID: 5666580408647985002}
   - component: {fileID: 5666580408647985000}
   - component: {fileID: 5666580408647985003}
+  - component: {fileID: 4319308228797663207}
   m_Layer: 0
   m_Name: MiddleLeg
   m_TagString: Untagged
@@ -1960,6 +2019,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4319308228797663207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666580408647985001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5666580408769514861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,10 +2080,13 @@ MonoBehaviour:
   legsList:
   - rigidbody: {fileID: 5666580409124251117}
     joint: {fileID: 5666580409124251113}
+    helper: {fileID: 0}
   - rigidbody: {fileID: 5666580408267388954}
     joint: {fileID: 5666580408267388967}
+    helper: {fileID: 2673218998834472311}
   - rigidbody: {fileID: 5666580407136439381}
     joint: {fileID: 5666580407136439390}
+    helper: {fileID: 2038157352964859595}
 --- !u!1 &5666580409020165022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,6 +2101,7 @@ GameObject:
   - component: {fileID: 5666580409020165010}
   - component: {fileID: 5666580409020165011}
   - component: {fileID: 5666580409020165008}
+  - component: {fileID: 2354203536969273471}
   m_Layer: 0
   m_Name: LowerLeg
   m_TagString: Untagged
@@ -2163,6 +2238,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2354203536969273471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666580409020165022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5666580409027237395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,10 +2569,13 @@ MonoBehaviour:
   legsList:
   - rigidbody: {fileID: 5666580409027237398}
     joint: {fileID: 5666580409027237394}
+    helper: {fileID: 0}
   - rigidbody: {fileID: 5666580408451270000}
     joint: {fileID: 5666580408451270013}
+    helper: {fileID: 3986616111584457915}
   - rigidbody: {fileID: 5666580408336195482}
     joint: {fileID: 5666580408336195495}
+    helper: {fileID: 1814638168729746012}
 --- !u!1 &8491869940634181673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,6 +2590,7 @@ GameObject:
   - component: {fileID: 8491869940634181674}
   - component: {fileID: 8491869940634181675}
   - component: {fileID: 8491869940634181679}
+  - component: {fileID: 9083712692757615879}
   m_Layer: 0
   m_Name: MiddleLeg
   m_TagString: Untagged
@@ -2635,6 +2726,18 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &9083712692757615879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491869940634181673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8491869942159252763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,6 +2752,7 @@ GameObject:
   - component: {fileID: 8491869942159252766}
   - component: {fileID: 8491869942159252767}
   - component: {fileID: 8491869942159252765}
+  - component: {fileID: 7771215113005736773}
   m_Layer: 0
   m_Name: LowerLeg
   m_TagString: Untagged
@@ -2785,3 +2889,15 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7771215113005736773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8491869942159252763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c20ff1c5c3d4964bbbd9a07bab57a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
