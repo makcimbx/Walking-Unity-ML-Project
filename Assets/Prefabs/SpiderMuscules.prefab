@@ -1021,7 +1021,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 2000
+  MaxStep: 1000
   spider: {fileID: 5666580407339448818}
   finishTransform: {fileID: 5666580407159150820}
   UseVecObs: 1

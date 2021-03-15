@@ -16,7 +16,6 @@ public class SpiderController : Agent
 
     private List<Quaternion> startQuaternion = new List<Quaternion>();
     private List<Vector3> startPosition = new List<Vector3>();
-    private int impulseCounter;
 
     public override void Initialize()
     {
