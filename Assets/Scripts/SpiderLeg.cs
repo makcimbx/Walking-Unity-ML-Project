@@ -33,8 +33,8 @@ public class SpiderLeg : MonoBehaviour
         private Vector3 startPosition;
         private Quaternion startQuaternion;
         
-        internal Vector3 Position => rigidbody.position;
-        internal Quaternion Rotation => rigidbody.rotation;
+        internal Vector3 Position => rigidbody.transform.position;
+        internal Quaternion Rotation => rigidbody.transform.localRotation;
         internal bool OnFloor => helper?.OnFloor ?? false;
         internal Rigidbody Rigidbody => rigidbody;
 
