@@ -731,7 +731,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 884a9a5e00bde024c9b25478a0a54ad7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -780,6 +780,7 @@ GameObject:
   - component: {fileID: 5666580407339448817}
   - component: {fileID: 5666580407339448830}
   - component: {fileID: 5666580407339448818}
+  - component: {fileID: 7825290938577824177}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -898,6 +899,18 @@ MonoBehaviour:
   - {fileID: 5666580407410098748}
   - {fileID: 5666580408128875911}
   targetUpsideDownAngle: 0
+--- !u!114 &7825290938577824177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666580407339448828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6b17dfd0539f042bf3bbda0a440812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5666580407410098744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BrainParameters:
     VectorObservationSize: 120
-    NumStackedVectorObservations: 40
+    NumStackedVectorObservations: 10
     m_ActionSpec:
       m_NumContinuousActions: 12
       BranchSizes: 
@@ -1042,6 +1055,8 @@ MonoBehaviour:
   finishTransform: {fileID: 5666580407159150820}
   UseVecObs: 1
   areaColor: {r: 0, g: 1, b: 0.1530397, a: 0.33333334}
+  motorForce: 300
+  motorVelocity: 1000
 --- !u!114 &5666580408026589728
 MonoBehaviour:
   m_ObjectHideFlags: 0
