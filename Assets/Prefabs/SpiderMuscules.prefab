@@ -126,13 +126,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: -0.0000019073486}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -408,13 +408,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: -0.0000011920929}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -570,13 +570,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: -0.0000029802322, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -723,7 +723,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -867,13 +867,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: -0.0000020819618, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -1020,7 +1020,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -1215,7 +1215,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -1359,13 +1359,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: -0.0000019073486}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -1521,13 +1521,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: 0.0000018916818, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -1743,13 +1743,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0.0000011920929}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -1965,13 +1965,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: -0.000003274055, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -2160,13 +2160,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: -0.0000029802322, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -2322,13 +2322,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: -0.0000040687837, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -2484,13 +2484,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: -0.0000017881393, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -2646,13 +2646,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: -0.0000037749608, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -2808,13 +2808,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: 0.0000033775966, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -3090,13 +3090,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: -0.0000021855037, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -3252,13 +3252,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: -0.0000024793262, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -3669,7 +3669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 173
+    VectorObservationSize: 433
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 12
@@ -3678,7 +3678,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 2e2130a611669dc4a80902a0dd9152da, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: SpiderMuscules
@@ -3846,13 +3846,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: -0.0000014305115}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -4059,7 +4059,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -4194,7 +4194,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -4329,7 +4329,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -4473,13 +4473,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: -0.0000023841858}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -4635,13 +4635,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: 0.000003083775, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -4797,13 +4797,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0.0000019073486}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -4959,13 +4959,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: -0.000003274055, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -5121,13 +5121,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000095139974, y: -0.49999997, z: 0.0000025828695}
+  m_ConnectedAnchor: {x: 0.000003083775, y: -0.49999997, z: 0.0000025828695}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -5283,13 +5283,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.00000166893, z: -0.0000019073486}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -5445,13 +5445,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: 0.0000021855037, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -5607,13 +5607,13 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.49999994, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000019868213, y: -0.4976251, z: -0.0000005960466}
+  m_ConnectedAnchor: {x: 0.0000033775966, y: -0.4976251, z: -0.0000005960466}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -5760,7 +5760,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0
@@ -5895,7 +5895,7 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     targetVelocity: 0
     force: 0

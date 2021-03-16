@@ -67,7 +67,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ml-agents": {
-      "version": "file:C:/Users/makci/Desktop/UnityML/com.unity.ml-agents",
+      "version": "file:D:/_fork repos/com.unity.ml-agents",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -77,14 +77,6 @@
         "com.unity.modules.physics": "1.0.0",
         "com.unity.modules.physics2d": "1.0.0",
         "com.unity.modules.unityanalytics": "1.0.0"
-      }
-    },
-    "com.unity.ml-agents.extensions": {
-      "version": "file:C:/Users/makci/Desktop/UnityML/com.unity.ml-agents.extensions",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.unity.ml-agents": "1.8.1-preview"
       }
     },
     "com.unity.test-framework": {
