@@ -8,8 +8,8 @@ public class Spider : MonoBehaviour
     [SerializeField] private Rigidbody rigBody;
     
     internal bool OnFloor { get; private set; }
-    internal Vector3 Position => rigBody.position;
-    internal Quaternion Rotation => rigBody.rotation;
+    internal Vector3 Position => rigBody.transform.position;
+    internal Quaternion Rotation => rigBody.transform.localRotation;
     internal Vector3 StartPosition => startPosition;
     
     [Space]

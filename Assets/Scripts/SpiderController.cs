@@ -28,19 +28,22 @@ public class SpiderController : Agent
     {
         if (UseVecObs)
         {
-            sensor.AddObservation(finishTransform.position);
+            sensor.AddObservation(transform.InverseTransformDirection(finishTransform.position));
             foreach (var spiderLeg in spider.SpiderLegs)
             {
                 foreach (var leg in spiderLeg.LegsList)
                 {
-                    sensor.AddObservation(leg.Position);
-                    sensor.AddObservation(leg.Rotation.eulerAngles);
-                    sensor.AddObservation(leg.Rigidbody.velocity);
+                    sensor.AddObservation(transform.InverseTransformDirection(leg.Position));
+                    sensor.AddObservation(leg.Rotation);
+                    sensor.AddObservation(transform.InverseTransformDirection(leg.Rigidbody.velocity));
+                    sensor.AddObservation(transform.InverseTransformDirection(leg.Rigidbody.angularVelocity));
                 }
             }
-            sensor.AddObservation(spider.Position);
-            sensor.AddObservation(spider.Rotation.eulerAngles);
-            sensor.AddObservation(spider.RigBody.velocity);
+            sensor.AddObservation(transform.InverseTransformDirection(spider.Position));
+            sensor.AddObservation(spider.Rotation);
+            sensor.AddObservation(transform.InverseTransformDirection(spider.RigBody.velocity));
+            sensor.AddObservation(transform.InverseTransformDirection(spider.RigBody.angularVelocity));
+            sensor.AddObservation(Vector3.Distance(spider.Position, finishTransform.position));
         }
     }
 
@@ -52,9 +55,9 @@ public class SpiderController : Agent
             var actionY = actionBuffers.ContinuousActions[i * 3 + 1];
             var actionZ = actionBuffers.ContinuousActions[i * 3 + 2];
 
-            spider.SpiderLegs[i].LegsList[0].SetMotorVelocityAndForce(actionX * 1000, 100);
-            spider.SpiderLegs[i].LegsList[1].SetMotorVelocityAndForce(actionY * 1000, 100);
-            spider.SpiderLegs[i].LegsList[2].SetMotorVelocityAndForce(actionZ * 1000, 100);
+            spider.SpiderLegs[i].LegsList[0].SetMotorVelocityAndForce(actionX * 1000, 200);
+            spider.SpiderLegs[i].LegsList[1].SetMotorVelocityAndForce(actionY * 1000, 200);
+            spider.SpiderLegs[i].LegsList[2].SetMotorVelocityAndForce(actionZ * 1000, 200);
         }
 
         bool isLegOnFloor = false;
@@ -77,14 +80,15 @@ public class SpiderController : Agent
             SetReward(-1f);
             EndEpisode();
         }
-        else if (curDistance < 5)
+        else if (curDistance < 3)
         {
             SetReward(1f);
             EndEpisode();
         }
         else
         {
-            SetReward(progress);
+            var dir = finishTransform.position - spider.transform.position;
+            SetReward(progress * Vector3.Dot(spider.transform.forward, dir.normalized));
         }
     }
 
