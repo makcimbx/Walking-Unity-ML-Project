@@ -36,11 +36,11 @@ public class MusculeController : Agent
         if (UseVecObs)
         {
             sensor.AddObservation(finishTransform.position);
-            foreach (var item in transformList)
-            {
-                sensor.AddObservation(item.transform.position);
-                sensor.AddObservation(item.transform.rotation);
-            }
+            // foreach (var item in transformList)
+            // {
+            //     sensor.AddObservation(item.transform.position);
+            //     sensor.AddObservation(item.transform.rotation);
+            // }
         }
     }
 

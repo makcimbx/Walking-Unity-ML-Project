@@ -28,54 +28,52 @@ public class SpiderController : Agent
     {
         if (UseVecObs)
         {
-            sensor.AddObservation(transform.InverseTransformDirection(finishTransform.position));
-            foreach (var spiderLeg in spider.SpiderLegs)
-            {
-                foreach (var leg in spiderLeg.LegsList)
-                {
-                    sensor.AddObservation(transform.InverseTransformDirection(leg.Position));
-                    sensor.AddObservation(leg.Rotation);
-                    sensor.AddObservation(transform.InverseTransformDirection(leg.Rigidbody.velocity));
-                    sensor.AddObservation(transform.InverseTransformDirection(leg.Rigidbody.angularVelocity));
-                }
-            }
-            sensor.AddObservation(transform.InverseTransformDirection(spider.Position));
-            sensor.AddObservation(spider.Rotation);
-            sensor.AddObservation(transform.InverseTransformDirection(spider.RigBody.velocity));
-            sensor.AddObservation(transform.InverseTransformDirection(spider.RigBody.angularVelocity));
-            sensor.AddObservation(Vector3.Distance(spider.Position, finishTransform.position));
+            sensor.AddObservation(finishTransform.position);
+            // foreach (var spiderLeg in spider.SpiderLegs)
+            // {
+            //     foreach (var leg in spiderLeg.LegsList)
+            //     {
+            //         sensor.AddObservation(transform.InverseTransformDirection(leg.Position));
+            //         sensor.AddObservation(leg.Rotation);
+            //         sensor.AddObservation(transform.InverseTransformDirection(leg.Rigidbody.velocity));
+            //         sensor.AddObservation(transform.InverseTransformDirection(leg.Rigidbody.angularVelocity));
+            //     }
+            // }
+            // sensor.AddObservation(transform.InverseTransformDirection(spider.Position));
+            // sensor.AddObservation(spider.Rotation);
+            // sensor.AddObservation(transform.InverseTransformDirection(spider.RigBody.velocity));
+            // sensor.AddObservation(transform.InverseTransformDirection(spider.RigBody.angularVelocity));
         }
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 8; i++)
         {
-            var actionX = actionBuffers.ContinuousActions[i * 3 + 0];
-            var actionY = actionBuffers.ContinuousActions[i * 3 + 1];
-            var actionZ = actionBuffers.ContinuousActions[i * 3 + 2];
+            var actionX = actionBuffers.ContinuousActions[i * 4 + 0];
+            var actionY = actionBuffers.ContinuousActions[i * 4 + 1];
+            var actionZ = actionBuffers.ContinuousActions[i * 4 + 2];
+            var actionV = actionBuffers.ContinuousActions[i * 4 + 3];
 
             spider.SpiderLegs[i].LegsList[0].SetMotorVelocityAndForce(actionX * 1000, 200);
             spider.SpiderLegs[i].LegsList[1].SetMotorVelocityAndForce(actionY * 1000, 200);
             spider.SpiderLegs[i].LegsList[2].SetMotorVelocityAndForce(actionZ * 1000, 200);
+            spider.SpiderLegs[i].LegsList[3].SetMotorVelocityAndForce(actionV * 1000, 50);
         }
 
         bool isLegOnFloor = false;
         foreach (var leg in spider.SpiderLegs)
         {
-            int counter = 0;
             foreach (var legElement in leg.LegsList)
             {
-                if (counter == 2) continue;
                 isLegOnFloor = isLegOnFloor || legElement.OnFloor;
-                counter++;
             }
         }
 
         var curDistance = Vector3.Distance(spider.Position, finishTransform.position);
         var maxDistance = Vector3.Distance(spider.StartPosition, finishTransform.position);
         var progress = 1 - (curDistance / maxDistance);
-        if (progress <= -1 || spider.OnFloor || isLegOnFloor)
+        if (progress <= -1 || spider.OnFloor)
         {
             SetReward(-1f);
             EndEpisode();
