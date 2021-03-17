@@ -53,7 +53,7 @@ behaviors:
     checkpoint_interval: 500000
     max_steps: 5000000
     time_horizon: 64
-    summary_freq: 50000
+    summary_freq: 10000
     threaded: true
   SpiderMuscules:
     trainer_type: ppo

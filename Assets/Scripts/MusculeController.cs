@@ -18,6 +18,7 @@ public class MusculeController : Agent
     private List<Quaternion> startQuaternion = new List<Quaternion>();
     private List<Vector3> startPosition = new List<Vector3>();
     private int impulseCounter;
+    private float stepReward;
 
     public override void Initialize()
     {
@@ -46,23 +47,27 @@ public class MusculeController : Agent
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
+        stepReward -= 0.0001f;
         var actionX = actionBuffers.ContinuousActions[0];
 
         joint.motor = new JointMotor() { targetVelocity = actionX * 1000, force = 100, freeSpin = false };
 
-        var curDistance = Vector3.Distance(joint.transform.position, finishTransform.position);
-        if (curDistance > 25)
+        var curDistance = Vector3.Distance(transformList[0].position, finishTransform.position);
+        var maxDistance = Vector3.Distance(startPosition[0], finishTransform.position);
+        var progress = 1 - (curDistance / maxDistance);
+        if (progress <= -1)
         {
+            SetReward(-1f + stepReward);
             EndEpisode();
         }
         else if (curDistance < 1)
         {
-            SetReward(1f);
+            SetReward(1f + stepReward);
             EndEpisode();
         }
-        else if(curDistance < 10)
+        else 
         {
-            SetReward(0.5f);
+            SetReward(progress + stepReward);
         }
     }
 
@@ -80,6 +85,7 @@ public class MusculeController : Agent
 
     public void SetResetParameters()
     {
+        stepReward = 0;
         joint.motor = new JointMotor() { targetVelocity = 0, force = 100, freeSpin = false };
         int counter = 0;
         foreach (var item in transformList)

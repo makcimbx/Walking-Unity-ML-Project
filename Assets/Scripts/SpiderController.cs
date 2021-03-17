@@ -73,7 +73,7 @@ public class SpiderController : Agent
         var curDistance = Vector3.Distance(spider.Position, finishTransform.position);
         var maxDistance = Vector3.Distance(spider.StartPosition, finishTransform.position);
         var progress = 1 - (curDistance / maxDistance);
-        if (progress <= -1 || spider.OnFloor)
+        if (progress <= -1 || spider.OnFloor || isLegOnFloor)
         {
             SetReward(-1f);
             EndEpisode();
