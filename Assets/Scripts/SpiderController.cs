@@ -16,6 +16,7 @@ public class SpiderController : Agent
 
     private List<Quaternion> startQuaternion = new List<Quaternion>();
     private List<Vector3> startPosition = new List<Vector3>();
+    private float stepReward;
 
     public override void Initialize()
     {
@@ -48,6 +49,7 @@ public class SpiderController : Agent
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
+        stepReward -= 0.0001f;
         for (int i = 0; i < 8; i++)
         {
             var actionX = actionBuffers.ContinuousActions[i * 4 + 0];
@@ -58,35 +60,35 @@ public class SpiderController : Agent
             spider.SpiderLegs[i].LegsList[0].SetMotorVelocityAndForce(actionX * 1000, 200);
             spider.SpiderLegs[i].LegsList[1].SetMotorVelocityAndForce(actionY * 1000, 200);
             spider.SpiderLegs[i].LegsList[2].SetMotorVelocityAndForce(actionZ * 1000, 200);
-            spider.SpiderLegs[i].LegsList[3].SetMotorVelocityAndForce(actionV * 1000, 50);
+            spider.SpiderLegs[i].LegsList[3].SetMotorVelocityAndForce(actionV * 1000, 200);
         }
 
-        bool isLegOnFloor = false;
-        foreach (var leg in spider.SpiderLegs)
-        {
-            foreach (var legElement in leg.LegsList)
-            {
-                isLegOnFloor = isLegOnFloor || legElement.OnFloor;
-            }
-        }
+        // bool isLegOnFloor = false;
+        // foreach (var leg in spider.SpiderLegs)
+        // {
+        //     foreach (var legElement in leg.LegsList)
+        //     {
+        //         isLegOnFloor = isLegOnFloor || legElement.OnFloor;
+        //     }
+        // }
 
         var curDistance = Vector3.Distance(spider.Position, finishTransform.position);
         var maxDistance = Vector3.Distance(spider.StartPosition, finishTransform.position);
         var progress = 1 - (curDistance / maxDistance);
-        if (progress <= -1 || spider.OnFloor || isLegOnFloor)
+        if (progress <= -1 || spider.OnFloor)
         {
-            SetReward(-1f);
+            SetReward(-1f + stepReward);
             EndEpisode();
         }
         else if (curDistance < 3)
         {
-            SetReward(1f);
+            SetReward(1f + stepReward);
             EndEpisode();
         }
         else
         {
             var dir = finishTransform.position - spider.transform.position;
-            SetReward(progress * Vector3.Dot(spider.transform.forward, dir.normalized));
+            SetReward(progress * Vector3.Dot(spider.transform.forward, dir.normalized) + stepReward);
         }
     }
 
@@ -104,6 +106,7 @@ public class SpiderController : Agent
 
     public void SetResetParameters()
     {
+        stepReward = 0;
         spider.Reset();
     }
 
