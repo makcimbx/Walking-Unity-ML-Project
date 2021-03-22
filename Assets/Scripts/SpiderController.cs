@@ -50,17 +50,15 @@ public class SpiderController : Agent
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {
         stepReward -= 0.0001f;
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 4; i++)
         {
-            var actionX = actionBuffers.ContinuousActions[i * 4 + 0];
-            var actionY = actionBuffers.ContinuousActions[i * 4 + 1];
-            var actionZ = actionBuffers.ContinuousActions[i * 4 + 2];
-            var actionV = actionBuffers.ContinuousActions[i * 4 + 3];
+            var actionX = actionBuffers.ContinuousActions[i * 3 + 0];
+            var actionY = actionBuffers.ContinuousActions[i * 3 + 1];
+            var actionZ = actionBuffers.ContinuousActions[i * 3 + 2];
 
             spider.SpiderLegs[i].LegsList[0].SetMotorVelocityAndForce(actionX * 1000, 200);
             spider.SpiderLegs[i].LegsList[1].SetMotorVelocityAndForce(actionY * 1000, 200);
             spider.SpiderLegs[i].LegsList[2].SetMotorVelocityAndForce(actionZ * 1000, 200);
-            spider.SpiderLegs[i].LegsList[3].SetMotorVelocityAndForce(actionV * 1000, 200);
         }
 
         // bool isLegOnFloor = false;
@@ -75,7 +73,7 @@ public class SpiderController : Agent
         var curDistance = Vector3.Distance(spider.Position, finishTransform.position);
         var maxDistance = Vector3.Distance(spider.StartPosition, finishTransform.position);
         var progress = 1 - (curDistance / maxDistance);
-        if (progress <= -1 || spider.OnFloor)
+        if (progress <= -1 || spider.OnFloor || spider.CheckUpsideDown())
         {
             SetReward(-1f + stepReward);
             EndEpisode();
